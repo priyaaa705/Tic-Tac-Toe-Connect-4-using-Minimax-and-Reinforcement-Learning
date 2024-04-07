@@ -13,7 +13,7 @@ pip install -r requirements.txt
 If encountering issues with `requirements.txt`, install the `python-tictactoe` library directly.
 
 ```bash
-pip install python-tictactoe
+pip install python-tictactoe~=0.0.7
 ```
 
 ### Running the Games Command
