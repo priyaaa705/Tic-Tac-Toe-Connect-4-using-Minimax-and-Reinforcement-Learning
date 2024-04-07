@@ -629,8 +629,8 @@ def main():
     agent1 = QLearningAgent()
     agent2 = QLearningAgent()
 
-    q_table_agent1_path = "/Users/priya/Desktop/AI/Game/q_table_agent1.pkl"
-    q_table_agent2_path = "/Users/priya/Desktop/AI/Game/q_table_agent2.pkl"
+    q_table_agent1_path = "Connect 4/q_table_agent1.pkl"
+    q_table_agent2_path = "Connect 4/q_table_agent2.pkl"
 
     if os.path.exists(q_table_agent1_path) and os.path.exists(q_table_agent2_path):
         agent1.load_q_table(q_table_agent1_path)
@@ -698,8 +698,8 @@ def main():
         elif action == '2':
             episodes = int(input("Enter number of episodes for training: "))
             train_two_q_learning_agents(game, agent1, agent2, episodes)
-            agent1.save_q_table("/Users/priya/Desktop/AI/Game/q_table_agent1.pkl")  # Specify a filename
-            agent2.save_q_table("/Users/priya/Desktop/AI/Game/q_table_agent2.pkl")  # Specify a filename
+            agent1.save_q_table("Connect 4/q_table_agent1.pkl")  # Specify a filename
+            agent2.save_q_table("Connect 4/q_table_agent2.pkl")  # Specify a filename
             print("Training completed and Q-tables saved.")
         elif action == '3':
             print('Exiting program. Goodbye!')

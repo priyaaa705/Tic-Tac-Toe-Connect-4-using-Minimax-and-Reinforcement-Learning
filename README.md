@@ -5,9 +5,8 @@ This assignment explores the implementation of Minimax and Reinforcement Learnin
 
 Utilizing the open source [python-tictactoe library](https://pypi.org/project/python-tictactoe/), this endeavor demonstrates the application of these algorithms in game strategy development.
 
+Requirements: 
 ```
-Requirements:
-
 pip install -r requirements.txt
 ```
 

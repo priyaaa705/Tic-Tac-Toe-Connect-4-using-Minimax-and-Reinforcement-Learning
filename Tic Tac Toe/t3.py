@@ -10,7 +10,7 @@ XPLAYER = +1
 OPLAYER = -1
 EMPTY = 0
 
-trained_q_table_path = "/Users/priya/Desktop/AI/Game/"
+trained_q_table_path = "Tic Tac Toe/"
 
 board = [[EMPTY, EMPTY, EMPTY],
          [EMPTY, EMPTY, EMPTY],
@@ -594,14 +594,13 @@ def plot_results(results, title):
 def main():
 
     # Initialize two QLearning agents
-    q_learning_agent1 = QLearning(alpha=0.1, gamma=0.9, epsilon=0.2, q_table_path="/Users/priya/Desktop/AI/Game/q_table1.json")
-    q_learning_agent2 = QLearning(alpha=0.1, gamma=0.9, epsilon=0.2, q_table_path="/Users/priya/Desktop/AI/Game/q_table2.json")
+    q_learning_agent1 = QLearning(alpha=0.1, gamma=0.9, epsilon=0.2, q_table_path="Tic Tac Toe/q_table1.json")
+    q_learning_agent2 = QLearning(alpha=0.1, gamma=0.9, epsilon=0.2, q_table_path="Tic Tac Toe/q_table2.json")
 
     # Prompt the user to train a new Q-learning policy or use the existing one
     if input("Train new Q-learning policy? (Y/N): ").lower() == 'y':
         episodes = int(input("Enter number of training episodes: "))
         # Train the Q-learning agent with the specified number of episodes
-        # train_two_q_learning_agents(q_learning_agent1, q_learning_agent2, episodes)
         train_q_learning_against_minimax(q_learning_agent1, episodes, use_alpha_beta=True, save=True)
 
         # Save the updated Q-table at the end of training
